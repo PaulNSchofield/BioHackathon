@@ -24,7 +24,7 @@ $graph:
   type: record
   fields:
     admission_date:
-        doc: Date when the host was admitted to the health centre (e.g. "2020-01-01")
+        doc: Date when the host was admitted to secondary clinical care or hospital (e.g. "2020-01-01")
         type: string
         jsonldPredicate:
           _id: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164
@@ -89,11 +89,18 @@ $graph:
           _id: hhttp://purl.obolibrary.org/obo/DOID_526
           _type: "@id"
           noLinkCheck: true
-    diabetes:
+    type 1 diabetes mellitus:
         doc: Diabetes comorbidity existing pre-admission as one of the three possible values: [yes, no, unknown], eg "yes".
         type: string
         jsonldPredicate:
-          _id: http://purl.obolibrary.org/obo/DOID_9351
+          _id: http://purl.obolibrary.org/obo/DOID_9744
+          _type: "@id"
+          noLinkCheck: true
+    type 2 diabetes mellitus:
+        doc: Diabetes comorbidity existing pre-admission as one of the three possible values: [yes, no, unknown], eg "yes".
+        type: string
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/DOID_9352
           _type: "@id"
           noLinkCheck: true
     current_smoking:
